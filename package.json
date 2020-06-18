@@ -1,0 +1,25 @@
+{
+  "name": "metascraper-kyosho",
+  "version": "1.0.0",
+  "description": "Scrape data from KyoshoAmerica.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamkirkwood/metascraper-kyosho.git"
+  },
+  "keywords": [
+    "metascraper"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "author": "Adam Kirkwood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adamkirkwood/metascraper-kyosho/issues"
+  },
+  "homepage": "https://github.com/adamkirkwood/metascraper-kyosho#readme"
+}
