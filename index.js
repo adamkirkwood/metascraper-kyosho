@@ -1,7 +1,7 @@
 'use strict'
 
 const { memoizeOne } = require('@metascraper/helpers')
-const { parse } = require('tldts')
+const { getDomainWithoutSuffix } = require('tldts')
 
 const isValidUrl = memoizeOne(
   ({ url }) => getDomainWithoutSuffix(url) === 'kyoshoamerica'
