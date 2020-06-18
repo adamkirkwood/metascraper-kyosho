@@ -1,14 +1,11 @@
 'use strict'
 
-const {
-  memoizeOne
-} = require('@metascraper/helpers')
+const { memoizeOne } = require('@metascraper/helpers')
+const { parse } = require('tldts')
 
-const regex = /In Stock/g;
-
-const REGEX_KYOSHOAMERICA_URL = /(https?:\/\/(.+?\.)?kyoshoamerica\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/
-
-const isValidUrl = memoizeOne(({ url }) => REGEX_KYOSHOAMERICA_URL.test(url))
+const isValidUrl = memoizeOne(
+  ({ url }) => getDomainWithoutSuffix(url) === 'kyoshoamerica'
+)
 
 /**
  * A set of rules we want to declare under `metascraper-kyosho` namespace.
@@ -16,7 +13,7 @@ const isValidUrl = memoizeOne(({ url }) => REGEX_KYOSHOAMERICA_URL.test(url))
 **/
 module.exports = () => {
   const rules = {
-    availability: ({ htmlDom: $, url }) => (($('div#availability').text().matchAll(regex) === null) || false),
+    availability: ({ htmlDom: $, url }) => (($('div#availability').text() === "In Stock") || false),
     quantity: ({ htmlDom: $, url }) => 0
   }
 
