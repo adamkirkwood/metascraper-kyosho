@@ -1,9 +1,5 @@
 'use strict'
 
-const {
-  memoizeOne
-} = require('@metascraper/helpers')
-
 const regex = /In Stock/g;
 
 const REGEX_KYOSHOAMERICA_URL = /(https?:\/\/(.+?\.)?kyoshoamerica\.com(\/[A-Za-z0-9\-\._~:\/\?#\[\]@!$&'\(\)\*\+,;\=]*)?)/
