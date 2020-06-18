@@ -8,7 +8,8 @@ const regex = /In Stock/g;
 **/
 module.exports = () => {
   const rules = {
-    availability: ({ htmlDom: $, url }) => (($('div#availability').text().match(regex) === null) || false)
+    availability: ({ htmlDom: $, url }) => (($('div#availability').text().matchAll(regex) === null) || false),
+    quantity: 0
   }
   return rules
 }

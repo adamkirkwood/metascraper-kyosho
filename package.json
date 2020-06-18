@@ -1,6 +1,6 @@
 {
   "name": "metascraper-kyosho",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scrape data from KyoshoAmerica.com",
   "main": "index.js",
   "scripts": {
