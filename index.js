@@ -20,3 +20,5 @@ module.exports = () => {
 
   return rules
 }
+
+module.exports.isValidUrl = isValidUrl
